@@ -25,7 +25,31 @@
 			<string>([A-Z][a-z]+){2,}</string>
 			<key>name</key>
 			<string>string.markup.underline.link.internal.Wiki</string>
-		</dict>		
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Match WikiWords and make them into internal links.</string>
+			<key>match</key>
+			<string>\[#([\w,\d\s]+){2,}\]</string>
+			<key>name</key>
+			<string>string.markup.underline.link.thisdocumentlink.Wiki</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Match WikiWords and make them into internal link targets.</string>
+			<key>match</key>
+			<string>\[>([\w,\d\s]+){2,}\]:</string>
+			<key>name</key>
+			<string>keyword.control.header.thisdocumenttarget.Wiki</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Match WikiWords and make them into internal link targets.</string>
+			<key>match</key>
+			<string>\[>([\w,\d\s]+){2,}\]</string>
+			<key>name</key>
+			<string>string.markup.underline.link.thisdocumenttarget.Wiki</string>
+		</dict>
 		<dict>
 			<key>comment</key>
 			<string>Simplest possible web address matcher. If you think this is basic, you should see the one in the Markdown syntax file.</string>

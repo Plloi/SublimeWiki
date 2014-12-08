@@ -20,6 +20,9 @@ Thanks to Andy Hunt for the inspiration. If you haven't yet, I strongly recommen
 5. This system is sparse by design. There are only  a few things that get marked:
 	* WikiLinks
    		* These are identified as `markup.underline.internal.link.Wiki`. You may need to add style rules to your favorite theme to have it render.
+	* Anchor Links (Link: `[#Link Text]` Target: `[>Link Text]`)
+   		* Links are identified as `markup.underline.link.thisdocumentlink.Wiki`. You may need to add style rules to your favorite theme to have it render.
+   		* Targets are identified as `control.header.thisdocumenttarget.Wiki`. You may need to add style rules to your favorite theme to have it render.
 	* Email Links
 		* Identified as `string.quoted.link.email.Wiki`
 	* Web Links (i.e. `Http://` or `ftp://` links)

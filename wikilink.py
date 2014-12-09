@@ -18,8 +18,8 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
                 sublime.active_window().run_command('open_url', {"url": scope})
         elif "link.email.Wiki" in self.view.scope_name(location.a):
                 sublime.status_message("try to mail " + scope)
-                sublime.active_window().run_command('open_url', {"url": "mailto:"+scope})
-        elif "link.thisdocumentlink.Wiki" in self.view.scope_name(location.a):
+      git diff          sublime.active_window().run_command('open_url', {"url": "mailto:"+scope})
+        elif "link.document.Wiki" in self.view.scope_name(location.a):
             target = "[>"+scope[2:];
             target = self.view.find(target,0,sublime.LITERAL)
             target = sublime.Region(target.a, target.a)
@@ -49,11 +49,9 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
                 new_view = window.new_file()
                 default_text = "{0}\nWrite about {0} here.".format(word)
 
-                edit = new_view.begin_edit()
                 new_view.insert(edit,0,default_text)
-                new_view.end_edit(edit)
                 new_view.run_command('append', {'characters': default_text})
                 new_view.set_name("%s.wiki" % word)
                 new_view.set_syntax_file(self.view.settings().get('syntax'))
         else:
-            sublime.status_message("Can only open WikiWords, email addresses or web addresses.")
+            sublime.status_message("Can only open WikiWords, WikiLinks, email addresses or web addresses.")

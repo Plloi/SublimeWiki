@@ -19,6 +19,12 @@
 			<string>keyword.control.header.Wiki</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>^\s*(\[>([\w,\d\s]+){2,}\]:\s*$\n?)</string>
+			<key>name</key>
+			<string>keyword.control.header.Wiki</string>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>Match WikiWords and make them into links.</string>
 			<key>match</key>
@@ -32,23 +38,7 @@
 			<key>match</key>
 			<string>\[#([\w,\d\s]+){2,}\]</string>
 			<key>name</key>
-			<string>string.markup.underline.link.thisdocumentlink.Wiki</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Match WikiWords and make them into internal link targets.</string>
-			<key>match</key>
-			<string>\[>([\w,\d\s]+){2,}\]:</string>
-			<key>name</key>
-			<string>keyword.control.header.thisdocumenttarget.Wiki</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Match WikiWords and make them into internal link targets.</string>
-			<key>match</key>
-			<string>\[>([\w,\d\s]+){2,}\]</string>
-			<key>name</key>
-			<string>string.markup.underline.link.thisdocumenttarget.Wiki</string>
+			<string>string.markup.underline.link.document.Wiki</string>
 		</dict>
 		<dict>
 			<key>comment</key>

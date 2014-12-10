@@ -18,7 +18,7 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
                 sublime.active_window().run_command('open_url', {"url": scope})
         elif "link.email.Wiki" in self.view.scope_name(location.a):
                 sublime.status_message("try to mail " + scope)
-      git diff          sublime.active_window().run_command('open_url', {"url": "mailto:"+scope})
+                sublime.active_window().run_command('open_url', {"url": "mailto:"+scope})
         elif "link.document.Wiki" in self.view.scope_name(location.a):
             target = "[>"+scope[2:];
             target = self.view.find(target,0,sublime.LITERAL)

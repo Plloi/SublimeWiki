@@ -34,6 +34,14 @@
 		</dict>
 		<dict>
 			<key>comment</key>
+			<string>Match WikiTags and make them into links.</string>
+			<key>match</key>
+			<string>\[([A-Z][a-z]+){2,}\]</string>
+			<key>name</key>
+			<string>string.markup.underline.link.tag.Wiki</string>
+		</dict>
+		<dict>
+			<key>comment</key>
 			<string>Match WikiWords and make them into internal links.</string>
 			<key>match</key>
 			<string>\[#([\w,\d\s]+){2,}\]</string>

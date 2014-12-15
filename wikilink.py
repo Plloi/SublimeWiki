@@ -19,6 +19,13 @@ class WikiLinkCommand(sublime_plugin.TextCommand):
         elif "link.email.Wiki" in self.view.scope_name(location.a):
                 sublime.status_message("try to mail " + scope)
                 sublime.active_window().run_command('open_url', {"url": "mailto:"+scope})
+        elif "string.markup.underline.link.tag.Wiki" in self.view.scope_name(location.a):
+            target = "\["+scope[1:-1]+"\]\(";
+            target = self.view.find(target,0)
+            target = sublime.Region(target.b+1, target.b+1)
+            self.view.sel().clear()
+            self.view.sel().add(target)
+            self.view.show_at_center(target)
         elif "link.document.Wiki" in self.view.scope_name(location.a):
             target = "[>"+scope[2:];
             target = self.view.find(target,0,sublime.LITERAL)
